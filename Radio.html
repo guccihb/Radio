@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Radio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="radio-container">
+        <h1>Mi Radio Personalizada</h1>
+        <p>Reproduciendo: <span id="track-name">Radio.mp3</span></p>
+        
+        <!-- Reproductor de audio -->
+        <audio id="audio-player" src="Radio.mp3" preload="auto"></audio>
+
+        <div class="controls">
+            <button id="play-btn" onclick="togglePlay()">Reproducir</button>
+            <button onclick="changeTrack()">Cambiar Canción</button>
+        </div>
+        
+        <div class="volume">
+            <label for="volume">Volumen:</label>
+            <input type="range" id="volume" value="100" max="100" onchange="changeVolume(this.value)">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
